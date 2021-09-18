@@ -3,6 +3,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct {
+	char** name;
+	Qualification_t* degrees;
+} Student_t;
+
+typedef struct {
+	char** degree_name;
+	float gpa;
+	//int points;
+	Level_t* years;
+} Qualification_t;
+
+typedef struct {
+	int level;
+	int num_course;
+	Course_t* courses;
+} Level_t;
+
+typedef struct {
+	char** course_name;
+	int points;
+	int num_assessments;
+} Course_t;
+
 void read_weights(float** array, int num_assessments);
 
 float** weight_and_grade_array_allocator(int* number)
